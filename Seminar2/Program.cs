@@ -88,8 +88,105 @@
 // square (num1, num2);
 // Console.WriteLine();
 
+// =============================================================================================================
+
+//   Seminar 3. 
+
+// Обзор массива и цикла "for"
+
+// int[] nums = new int[10] {10, 45, 23, 45, 65, 23, 43, 56, 23, 23};
+// int max = nums[0];
+// for (int i = 0; i < nums.Length; i++)    //int i = 0; i++ - счетчик
+// {
+//     if (nums[i] > max)
+//     {
+//         max = nums[i];
+//     }
+// }
+// Console.WriteLine(max);
+
+//-----------------------------------------------------------------------------------------------------------
+
+// Задача 17. Прогр, к-я приимает координаты точки (X и Y), причем Х не равно 0 и У не равно 0, и выдает номер
+// четверти плоскости, в которой находится эта точка
+
+// определение четверти точки
+// int GetPointArea(int x, int y)
+// {
+//     if (x > 0 && y > 0) {
+//         return 1;
+//     }
+
+//     if (x < 0 && y > 0) {
+//         return 2;
+//     }
+
+//     if (x < 0 && y < 0) {
+//         return 3;
+//     }
+
+//     if (x > 0 && y < 0) {
+//         return 4;
+//     }
+//     return 0;
+// }
+
+// Console.Write("Enput X: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Enput y: ");
+// int y = Convert.ToInt32(Console.ReadLine());
+
+// int areaNum = GetPointArea(x, y);
+// Console.WriteLine($"Area = {areaNum}");
+
+//------------------------------------------------------------------------------------------------------------
+
+// Зад 21. Прогр, к-я принимает координаты двух точек и нах-т расстояние между ними в 2D пространстве
+
+// double GetDistanse (int x1, int y1, int x2, int y2) 
+// {
+//     double distanse = Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2));
+
+//     return distanse;
+// }
 
 
+// Console.Write("Input x1: ");
+// int x1 = Convert.ToInt32(Console.ReadLine());
 
+// Console.Write("Input y1: ");
+// int y1 = Convert.ToInt32(Console.ReadLine());
 
+// Console.Write("Input x2: ");
+// int x2 = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Input y2: ");
+// int y2 = Convert.ToInt32(Console.ReadLine());
+
+// double result = GetDistanse (x1, y1, x2, y2);
+// Console.WriteLine($"Расстояние равно: {Math.Round(result, 2)}");
+
+//-------------------------------------------------------------------------------------------------
+
+// Прогр к-я принимает на вход число (N) и выдает таблицу квадратов чисел от 1 до N
+
+// int[] getSquaresNumer(int numer)
+// {
+//     int[] squaresNumers = new int[numer];
+
+//     //Заполнение массива результата
+//         for (int i = 1; i <= numer; i++) {
+//         squaresNumers [i - 1] = i * i;
+//     }   
+//     return squaresNumers;     
+// }
+
+// Console.Write("Input name: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// int[] result = getSquaresNumer(num);
+// for (int i = 0; i < result.Length; i++) {
+// Console.WriteLine(result[i]);
+// }
 
