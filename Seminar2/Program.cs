@@ -190,3 +190,124 @@
 // Console.WriteLine(result[i]);
 // }
 
+//========================================================================================================
+
+// Задача. Прогр, принимает число А и выдает сумму чисел от 1 до А
+
+// int GetSum(int number)
+// {
+//     int sum = 0;
+//     if (number > 0)
+//     {
+//         for (int i = 1; i <= number; i++)
+//         {
+//             sum = sum + i;
+//         }
+//     }
+//     if (number < 0)
+//         {
+//             for (int i = 1; i >= number; i--)
+//             {
+//                 sum = sum + i;
+//             }
+//         }
+//     return sum;
+// }
+
+// try
+// {
+    // Console.Write("input A: ");
+    // int a = int.Parse(Console.ReadLine());
+
+//     int sum = GetSum(a);
+//     Console.WriteLine(sum);
+// }
+// catch(Exception ex)
+// {
+//     Console.WriteLine("Incorrect data entered");
+// }
+
+//------------------------------------------------------------------------------------------
+
+// Задача 24. Принимает число и выдает кол-во цифр в числе (456 -> 3)
+
+// int getDigit(int number)
+// {
+//     int countDigit = 0;                 // кол-во цифр в числе
+//     int tempNum = Math.Abs(number);     // временная переменная для хран входного значения
+//     while (tempNum != 0)
+//     {
+//         tempNum = tempNum / 10;
+//         countDigit++;
+//     }
+//     return countDigit;
+// }
+
+
+// Console.Write("input number: ");
+// int a = int.Parse(Console.ReadLine());
+
+// int countDigit = getDigit (a);
+// Console.WriteLine(countDigit);
+
+//----------------------------------------------------------------------------------------------
+
+// Задача 28. Принимает число N и выдает произведение чисел от 1 до N (4 -> 24)
+
+// int getNum(int n)
+// {
+//     int mult = 1;
+//     for (int i = 1; i <= n; i++)
+//     {
+//         mult = mult * i;
+//     }
+//     return mult;
+// }
+
+// Console.Write("input N: ");
+// int n = int.Parse(Console.ReadLine());
+
+// int res = getNum(n);
+// Console.WriteLine(res);
+
+//----------------------------------------------------------------------------------------------
+
+//  Задача. Выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке
+
+// int [] getArray()
+// {
+//     int[] array = new int[8];
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = new Random().Next(0, 2);
+//     }
+//     return array;
+// }
+
+// void PrintArrayToConsole(int[] array)
+// {
+//     for(int i = 0; i <= array.Length; i++)
+//     {
+//         Console.WriteLine(array[i]);
+//     }
+// }
+
+// int[] array = getArray();
+// PrintArrayToConsole(array);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
