@@ -295,7 +295,28 @@
 // int[] array = getArray();
 // PrintArrayToConsole(array);
 
+//--------------------------------------------------------------------------------------
 
+// Задача с ютубканала SimpleCode - ЗАПОЛНИТЬ МАССИВ С КЛАВИАТУРЫ | ВВОД МАССИВА С КОНСОЛИ C# | СИ ШАРП УРОКИ | ДОМАШНИЕ ЗАДАНИЯ # 6
+
+
+// Console.Write("Введите кол-во элементов массива:\t");
+// int elementsCount = Convert.ToInt32(Console.ReadLine());
+
+// int[] myArray = new int[elementsCount];
+
+// for (int i = 0; i < myArray.Length; i++)
+// {
+//     Console.Write($"Введите элемент массива с индексом {i}: \t");
+//     myArray[i] = Convert.ToInt32(Console.ReadLine());
+// }
+
+// Console.WriteLine("Вывод массива");
+
+// for (int i = 0; i < myArray.Length; i++)
+// {
+//     Console.WriteLine(myArray[i]);
+// }
 
 
 
