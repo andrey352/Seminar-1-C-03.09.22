@@ -192,6 +192,9 @@
 
 //========================================================================================================
 
+
+// Семинар №4
+
 // Задача. Прогр, принимает число А и выдает сумму чисел от 1 до А
 
 // int GetSum(int number)
@@ -318,16 +321,150 @@
 //     Console.WriteLine(myArray[i]);
 // }
 
+//=========================================================================================
+
+// 14.09.22 Семинар №5 
+
+// задача №31. Задайте массив из 12 эл-тов, заполненный случайными числами, из промежутка [-9, 9].
+// Найдите сумму отрицательных и положительных эл-тов.
+
+// int[] getArray(int size, int startValue, int endValue)
+// {
+//     var array = new int[size];                   // тоже что и int[] array = new int[]
+//     var random = new Random();                   // Random random
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = random.Next(startValue, endValue + 1);
+//     }
+//     return array;
+// } 
+
+// int getPosiNum(int[] array)
+// {
+//     var sum = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] > 0)
+//         {
+//             sum = sum + array[i];
+//         }
+//     }
+//     return sum;
+// }
+
+// int getSumNegativNumbers(int[] array)
+// {
+//     var sum = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] < 0)
+//         {
+//             sum = sum + array[i];
+//         }
+//     }
+//     return sum;
+// }
+
+// var array = getArray(12, -9, 9);
+// var sumPositive = getPosiNum(array);
+// var sumNegative = getSumNegativNumbers(array);
+
+// Console.WriteLine($"Сумма положительных - {sumPositive}\n" + $"Сумма отрицательных - {sumNegative}");
+
+//-----------------------------------------------------------------------------------------------
+
+// Задача 32. Напишите прог-му замена элементов массива: положтительнве элемены замените на отрицательные и наоборот
+// [-4, -8, 2] -> [4, 8, -2]
 
 
+// int[] getRevers(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = array[i] * -1;
+//     }
+//     return array;
+// }
+
+// var array = new int[4] {1, 2, -3, -4};
+
+// var resArray = getRevers(array);
+// for(int i = 0; i < array.Length; i++)
+// {
+//     Console.WriteLine(array[i]);
+// }
+
+//---------------------------------------------------------------------------------------------
+
+// Зад. 33. Задайте массив. Напишите прогр, к-я определяет, присутствует ли заданное число в массиве.
+// 4; массив [6, 7 , 19, 345] -> нет
+
+// bool getSolution(int[] array, int num)
+// {
+//     bool result = false;
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         if(array[i] == num)
+//         {
+//             result = true;
+//             break;                               // break обязателен, т к без него выдаст неверный результат
+//         }                                        // кроме если искомое число - последнее в массиве
+//         else result = false;
+//     }
+//     return result;
+// }
 
 
+// try
+// {
+// int[] myArray = {6, 7 , 19, 345};
+// Console.Write("Input a number: ");
+// var num = Convert.ToInt32(Console.ReadLine());
+
+// var resArray = getSolution(myArray, num);
+// Console.WriteLine(resArray);
+// }
+
+// catch 
+// {
+//     Console.WriteLine("incorrect data entered");
+// }
+
+//----------------------------------------------------------------------------------------------
+// не решена - ошибки в коде
+
+// Зад 35. Задайте одномерный массив из 123 чисел. Найти кол-во элементов массива, зн-я к-х лежат в отрезке[10,99]
+// Пример для массива из 5 эл-в: [5, 18, 123, 6, 2] -> 1
+
+// var array = new int[123];
+// var random = new Random();
+// for(int i = 0; i < array.Length; i++)
+// {
+//     array[i] = random.Next(-1000, 1000);
+// }
 
 
+// int getCount (int[] array)
+// {
+//     int num = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] >= 10 $$ array[i] <= 99)
+//         {
+//             num = num + 1;
+//             Console.WriteLine(array[i]);
+//         }
+//     }
+//     return num;
+// }
 
 
+// int res = getCount(array);
+// Console.WriteLine(res);
 
+//------------------------------------------------------------------------------------------------
 
+// 
 
 
 
