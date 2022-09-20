@@ -464,7 +464,178 @@
 
 //------------------------------------------------------------------------------------------------
 
-// 
+// Зад 37: Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, 
+// второй и предпоследний и т.д. Результат запишите в новом массиве. [1 2 3 4 5] -> 5 8 3; [6 7 3 6] -> 36 21
+
+// int[] GetPairMult(int[] array)
+// {
+//     int size = 0;
+//     int[] result = null;
+
+//     if (array.Length % 2 == 0)
+//     {
+//         size = array.Length / 2;
+//         result = new int[size];
+
+//         for (int i = 0; i < size; i++)
+//         {
+//             result[i] = array[i] * array[array.Length - i - 1];
+//         }
+//     }
+//     else
+//     {
+//         size = array.Length / 2 + 1;
+//         result = new int[size];
+
+//         for (int i = 0; i < size; i++)
+//         {
+//             if (i == (size - 1))
+//             {
+//                 result[i] = array[i];
+//             }
+//             else
+//             {
+//                 result[i] = array[i] * array[array.Length - i - 1];
+//             }
+//         }
+//     }
+//     return result;
+// }
+
+// int[] array = new int[] {1,4,6,3,7};
+// int[] result = GetPairMult(array);
+
+// ==============================================================================================
+
+// 16.09.22 Семинар №6 Продолжение решения задач с одномерными массивами
+
+// Задача 39. Напишите прогр, к-я перевернет одномерный массив. [1 2 3 4 5] -> [5 4 3 2 1]
+
+// int[] getReversArray (int[] array)
+// {
+//     int[] result = new int[array.Length];
+//     for (int i = 0; i < result.Length; i++)
+//     {
+//         result[i] = array[array.Length - 1 - i];
+//     }
+//     return result;
+// }
+
+// int[] array = {1,2,3,4,5};
+// int[] result = getReversArray(array);
+
+// for(int i = 0; i < array.Length; i++)
+// {
+//         Console.WriteLine(result[i]);
+// }
+// Console.WriteLine("");
+
+// 2й вариант решения без использования дополн массива (минус в том что исходный массив изменится)
+
+// int[] getReversArray (int[] array)
+// {
+//     int tempStorage = array[0];
+//     for(int i = 0; i < array.Length /2; i++)
+//     {
+//         tempStorage = array[i];
+//         array[i] = array[array.Length - 1 - i];
+//         array[array.Length - 1 - i] = tempStorage;
+//     }
+//     return array;
+// }
+
+// int[] array = {1,2,3,4,5};
+// int[] result = getReversArray(array);
+
+// for(int i = 0; i < array.Length; i++)
+// {
+//         Console.WriteLine(result[i]);
+// }
+// Console.WriteLine("");
+
+//-------------------------------------------------------------------------------------
+
+// Зад 40. прогр, к-я принимает три числа и проверяет, может ли существовать треугольник со сторонами такой длины
+// Теорема о неравенстве треуг: каждая сторона треуг меньше суммы двух других сторон
+
+// bool treangle(int a, int b, int c)
+// {
+//     if(a + b > c && a + c > b && b + c > a) return true;
+
+//     else return false;
+// }
+
+
+// Console.WriteLine("Input a");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input b");
+// int b = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input c");
+// int c = Convert.ToInt32(Console.ReadLine());
+
+// bool res = treangle(a, b, c);
+// Console.WriteLine(res);
+
+//-----------------------------------------------------------------------------------------
+
+// Зад 42. Прогр, к-я преобразует десятичное число в двоичное. 45 -> 101101
+//  27 13  6  3  1    делим на два и записываем снизу остаток от деления
+//   1  1  0  1  1    читаем справа налево
+
+// string reversString(string s)
+// {
+//     char[] arr = s.ToCharArray();
+//     Array.Reverse(arr);
+//     return new string(arr);
+// }
+
+// string getToInt2 (int num)
+// {
+//     string result = string.Empty;
+//     while(num > 0)
+//     {
+//         result = result + (num % 2).ToString();   // метод перевода р-та в строку
+//         num = num / 2;
+//     }
+//     result = reversString(result);
+//     return result;
+// }
+
+// Console.WriteLine("Input num");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// string result = getToInt2(num);
+// Console.WriteLine(result);
+
+//-----------------------------------------------------------------------------------------
+
+// Зад. 44 Не используя рекурсию, выведите первые N чисел Фибоначи. Первые два числа Фибоначи: 0 и 1.
+// Если N = 7 -> 0 1 1 2 3 5 8  
+
+// int [] getFibo(int n)
+// {
+//     int[] arr = new int[n];
+//     arr[0] = 0;
+//     arr[1] = 1;
+//     for (int i = 2; i < n; i++)
+//     {
+//         arr[i] = arr[i - 1] + arr[i - 2];
+//     }
+//     return arr;
+// }
+
+// Console.WriteLine("Input n");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("");
+
+// int[] res = getFibo(n);
+// Console.WriteLine("Вывод чисел фибо: ");
+// for(int i = 0; i < res.Length; i++)
+// {
+//     Console.WriteLine(res[i]);
+// }
+
+//=============================================================================================
 
 
 
