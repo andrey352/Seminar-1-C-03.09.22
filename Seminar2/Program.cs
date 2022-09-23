@@ -637,6 +637,113 @@
 
 //=============================================================================================
 
+// Семинар №7. Двухмерные массивы.
+//Зад 46. Задайте двухмерный массив размером m*n, заполненный случайными целыми числами.
+// m = 3, n = 4. 1 4 8 9 / 5 -2 33  -2 / 77 3 8 1
 
+// размерность массива:
+// int n = 0;
+// int m = 0;
+// Console.Write("Введите кол=во строк (N): ");
+// bool parseNIsOk = int.TryParse(Console.ReadLine(), out int numberN);
+// if (!parseNIsOk)                                           // если не получилось спарсить
+// {
+//     Console.WriteLine("Введено значение неверного формата");
+//     return;
+// }
+// else
+// {
+//     n = numberN;
+// }
 
+// Console.Write("Введите кол=во столбцов (M): ");
+// bool parseMIsOk = int.TryParse(Console.ReadLine(), out int numberM);
+// if (!parseMIsOk)
+// {
+//     Console.WriteLine("Введено значение неверного формата");
+//     return;
+// }
+// else
+// {
+//     m = numberM;
+// }
 
+// int[,] array = new int[n, m];
+
+// for (int i = 0; i < n; i++)
+// {
+//     for (int j = 0; j < m; j++)
+//     {
+//         array[i, j] = new Random().Next(1, 10);
+//     }
+// }
+
+// for (int i = 0; i < n; i++)
+// {
+//     for (int j = 0; j < m; j++)
+//     {
+//         Console.Write(array[i, j]);
+//     }
+//     Console.WriteLine();
+// }
+
+// Console.ReadKey();
+
+//--------------------------------------------------------------------------------------
+
+// Зад. 48. Задайте двухмерный массив размером m*n, каждый элемент в массиве находится по формуле: A = m + n,
+// Выведите полученный результат на экран. m = 3, n = 4 -> 0123/1234/2345
+
+// int[,] GetArray(int n, int m) 
+// {
+//     int[,] array = new int[n, m];
+
+//     for(int i = 0; i < n; i++)
+//     {
+//         for(int j = 0; j < m; j++)
+//         {
+//             array[i, j] = i + j;
+//         }
+//     }
+      
+//     return array;
+// }
+
+// int n = 0;
+// int m = 0;
+// Console.Write("Введите число строк N: ");
+// bool intParseNIsOk = int.TryParse(Console.ReadLine(), out int numberN);
+// if (!intParseNIsOk)
+// {
+//     Console.WriteLine(" введено некорректное значение");
+//     return;
+// }
+// else
+// {
+//     n = numberN;
+// }
+
+// Console.Write("Введите число столбцов (M): ");
+// bool intParseMIsOk = int.TryParse(Console.ReadLine(), out int numberM);
+// if (!intParseNIsOk)
+// {
+//     Console.WriteLine(" введено некорректное значение");
+//     return;
+// }
+// else
+// {
+//     m = numberM;
+// }
+
+// int[,] resArray = GetArray(n, m);
+
+// for(int i = 0; i < n; i++)
+// {
+//     for(int j = 0; j < m; j++)
+//     {
+//         Console.Write(resArray[i, j] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+//====================================================================================================
