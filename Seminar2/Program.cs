@@ -747,3 +747,107 @@
 // }
 
 //====================================================================================================
+
+// Семинар 8. Двухмерные массивы, продолжение.
+
+// Зад 53. Задайте двухмерный массив. Напишите прогр, к-я поменяет местами первую и последнюю строку массива
+
+// int[,] mass = new int[3, 3] {{1,2,3}, {4,5,6}, {7,8,9}};
+
+// for(int i = 0; i < mass.GetLength(0); i++)
+// {
+//     for(int j = 0; j < mass.GetLength(1); j++)
+//     {
+//         int tmp = mass[i, j];
+//         mass[i, j] = mass[mass.GetLength(1) - 1, j];
+//         mass[mass.GetLength(1) - 1, j] = tmp;
+//     }
+//     break;
+// }
+
+// for(int i = 0; i < mass.GetLength(0); i++)
+// {
+//     for(int j = 0; j < mass.GetLength(1); j++)
+//     {
+//         Console.Write(mass[i, j]);
+//     }
+//     Console.WriteLine();
+// }
+
+//----------------------------------------------------------------------------------------------------
+
+// Зад 55. Задайте двухмерный массив. Напишите прогр, к-я заменяет строки на столбцы. В случае если это невозможно, выводим собщ
+
+// int[,] mass = new int[3, 3] {{1,2,3}, {4,5,6}, {7,8,9}};
+
+// int[,] newMass = new int[3, 3];
+// for(int i = 0; i < newMass.GetLength(0); i++)
+// {
+//     for(int j = 0; j < newMass.GetLength(1); j++)
+//     {
+//         newMass[i, j] = mass[j, i];
+//     }
+// }
+
+// for(int i = 0; i < newMass.GetLength(0); i++)
+// {
+//     for(int j = 0; j < newMass.GetLength(1); j++)
+//     {
+//         Console.Write(newMass[i, j] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+//----------------------------------------------------------------------------------------------
+
+// Зад 57. Составить частотный словарь эл-тов двухмерного массива. Частотный словарь содержит информацию
+// о том, сколько раз встечается эл-т входных данных.
+
+// int[,] mass = new int[3, 3] {{1,2,3}, {4,5,6}, {7,8,8}};
+
+// int max = mass[0, 0];
+// int min = mass[0, 0];
+
+
+// for(int i = 0; i < mass.GetLength(0); i++)
+// {
+//     for(int j = 0; j < mass.GetLength(1); j++)
+//     {
+//         if(mass[i, j] > max) max = mass[i, j];
+//     }
+// }
+// Console.WriteLine(max);
+
+
+// for(int i = 0; i < mass.GetLength(0); i++)
+// {
+//     for(int j = 0; j < mass.GetLength(1); j++)
+//     {
+//         if(mass[i, j] < min) min = mass[i, j];
+//     }
+// }
+// Console.WriteLine(min);
+
+
+// int[] myArray = new int[max - min + 1];
+
+// for(int a = 0; a < (max-min+1); a++)
+// {
+//     for(int i = 0; i < mass.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < mass.GetLength(1); j++)
+//         {
+//             if(mass[i, j] == (a + min)) myArray[a] = myArray[a] + 1; 
+//         }
+//     }
+// }
+
+// for(int i = 0; i < (max-min+1); i++)
+// {
+//     if(myArray[i] != 0)
+//     {
+//         Console.WriteLine($"Элемент {i+min} встречается {myArray[i]} раз");
+//     }
+// }
+
+
